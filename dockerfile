@@ -28,4 +28,7 @@ RUN git submodule update --init
 
 # Build the packages
 WORKDIR /root/catkin_ws
-
+RUN apt install -y \
+    ros-noetic-roslint \
+    ros-noetic-pcl-ros
+RUN catkin build
