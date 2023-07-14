@@ -22,9 +22,4 @@ RUN git clone https://github.com/Brazilian-Institute-of-Robotics/i2c_device_ros
 RUN git clone https://github.com/Brazilian-Institute-of-Robotics/mpu6050_driver
 RUN git clone https://github.com/Livox-SDK/livox_ros_driver.git
 
-# Initialize submodules
-WORKDIR ~/catkin_ws/src/Point-LIO
-RUN git submodule update --init
 
-# Build the packages
-RUN catkin build
