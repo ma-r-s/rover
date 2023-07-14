@@ -19,5 +19,5 @@ RUN cd Point-LIO && git submodule update --init
 RUN git clone https://github.com/mateusmenezes95/i2c_device_ros.git
 RUN git clone https://github.com/mateusmenezes95/mpu6050_driver.git
 #Build
-cd ~/ws_livox/ && catkin_make
-cd ~/catkin_ws/ && catkin_make
+RUN cd ~/ws_livox/ && catkin_make
+RUN cd ~/catkin_ws/ && catkin_make
