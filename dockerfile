@@ -18,6 +18,5 @@ RUN cd ~/catkin_ws/src && git clone https://github.com/Brazilian-Institute-of-Ro
 RUN cd ~/catkin_ws/src && git clone https://github.com/Brazilian-Institute-of-Robotics/mpu6050_driver
 RUN cd ~/catkin_ws/src/Point-LIO && git submodule update --init
 #Build
-RUN . /opt/ros/noetic/setup.sh
-RUN cd ~/ws_livox && catkin_make
-RUN cd ~/catkin_ws && catkin_make
+RUN . /opt/ros/noetic/setup.sh && cd ~/ws_livox && catkin_make
+RUN . /opt/ros/noetic/setup.sh && cd ~/catkin_ws && catkin_make
