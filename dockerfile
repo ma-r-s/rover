@@ -13,6 +13,8 @@ RUN . /opt/ros/noetic/setup.sh && . ~/ws_livox/devel/setup.sh && cd ~/catkin_ws 
 
 FROM ros:noetic
 
+FROM ros:noetic
+
 # Prepare for install
 RUN apt update && apt upgrade -y
 RUN mkdir -p ~/catkin_ws/src
