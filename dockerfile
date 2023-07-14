@@ -31,4 +31,4 @@ WORKDIR /root/catkin_ws
 RUN apt install -y \
     ros-noetic-roslint \
     ros-noetic-pcl-ros
-RUN . /opt/ros/kinetic/setup.sh && catkin build
+RUN . /opt/ros/noetic/setup.sh && catkin build
