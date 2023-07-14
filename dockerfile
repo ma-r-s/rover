@@ -20,5 +20,5 @@ RUN git clone https://github.com/Brazilian-Institute-of-Robotics/mpu6050_driver
 RUN cd Point-LIO && git submodule update --init
 RUN cd ~/catkin_ws && rosdep install --from-paths src --ignore-src --rosdistro noetic -y
 #Build
-RUN cd ~/ws_livox/ && catkin_make
-RUN cd ~/catkin_ws/ && catkin_make
+RUN cd ~/ws_livox && catkin_make
+RUN cd ~/catkin_ws && catkin_make
