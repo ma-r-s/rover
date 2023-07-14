@@ -8,6 +8,7 @@ RUN apt install -y \
     ros-noetic-pcl-conversions \
     libeigen3-dev \
     ros-noetic-rosbridge-server
+RUN apt install -y git
 #Clone
 RUN cd ~
 RUN git clone https://github.com/Livox-SDK/livox_ros_driver.git ws_livox/src
