@@ -27,4 +27,4 @@ WORKDIR /root/catkin_ws/src/Point-LIO
 RUN git submodule update --init
 
 # Build the packages
-RUN catkin build
+RUN . /opt/ros/noetic/setup.sh && catkin build
