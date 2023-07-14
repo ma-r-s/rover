@@ -12,7 +12,9 @@ RUN apt install -y \
     ros-noetic-velodyne \
     ros-noetic-pcl-conversions \
     ros-noetic-rosbridge-server \
-    ros-noetic-eigen-conversions
+    ros-noetic-eigen-conversions \
+    ros-noetic-roslint \
+    ros-noetic-pcl-ros
 
 # Clone repositories
 WORKDIR /root/catkin_ws/src
@@ -28,7 +30,4 @@ RUN git submodule update --init
 
 # Build the packages
 WORKDIR /root/catkin_ws
-RUN apt install -y \
-    ros-noetic-roslint \
-    ros-noetic-pcl-ros
 RUN . /opt/ros/noetic/setup.sh && catkin build
