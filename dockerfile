@@ -14,11 +14,11 @@ RUN cd ~
 RUN git clone https://github.com/Livox-SDK/livox_ros_driver.git ws_livox/src
 RUN cd ~/catkin_ws/src
 RUN git clone https://github.com/ros-drivers/velodyne.git
-RUN rosdep install --from-paths src --ignore-src --rosdistro noetic -y
 RUN git clone https://github.com/hku-mars/Point-LIO.git
-RUN cd Point-LIO && git submodule update --init
 RUN git clone https://github.com/mateusmenezes95/i2c_device_ros.git
 RUN git clone https://github.com/mateusmenezes95/mpu6050_driver.git
+RUN cd Point-LIO && git submodule update --init
+RUN cd ~/catkin_ws && rosdep install --from-paths src --ignore-src --rosdistro noetic -y
 #Build
 RUN cd ~/ws_livox/ && catkin_make
 RUN cd ~/catkin_ws/ && catkin_make
