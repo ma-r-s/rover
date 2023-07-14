@@ -4,11 +4,12 @@ RUN apt update && apt upgrade -y
 RUN mkdir ~/catkin_ws && mkdir ~/catkin_ws/src
 #Install dependencies
 RUN apt install -y \
+    git \
     ros-noetic-velodyne \
     ros-noetic-pcl-conversions \
     libeigen3-dev \
-    ros-noetic-rosbridge-server
-RUN apt install -y git
+    ros-noetic-rosbridge-server \
+    ros-noetic-eigen-conversions
 #Clone
 RUN cd ~ && git clone https://github.com/Livox-SDK/livox_ros_driver.git ws_livox/src
 RUN cd ~/catkin_ws/src && git clone https://github.com/ros-drivers/velodyne.git
