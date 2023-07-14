@@ -10,15 +10,13 @@ RUN apt install -y \
     ros-noetic-rosbridge-server
 RUN apt install -y git
 #Clone
-RUN cd ~
-RUN git clone https://github.com/Livox-SDK/livox_ros_driver.git ws_livox/src
-RUN cd ~/catkin_ws/src
-RUN git clone https://github.com/ros-drivers/velodyne.git
-RUN git clone https://github.com/hku-mars/Point-LIO.git
-RUN git clone https://github.com/Brazilian-Institute-of-Robotics/i2c_device_ros
-RUN git clone https://github.com/Brazilian-Institute-of-Robotics/mpu6050_driver
+RUN cd ~ && git clone https://github.com/Livox-SDK/livox_ros_driver.git ws_livox/src
+RUN cd ~/catkin_ws/src && git clone https://github.com/ros-drivers/velodyne.git
+RUN cd ~/catkin_ws/src && git clone https://github.com/hku-mars/Point-LIO.git
+RUN cd ~/catkin_ws/src && git clone https://github.com/Brazilian-Institute-of-Robotics/i2c_device_ros
+RUN cd ~/catkin_ws/src && git clone https://github.com/Brazilian-Institute-of-Robotics/mpu6050_driver
 RUN cd Point-LIO && git submodule update --init
 RUN cd ~/catkin_ws && rosdep install --from-paths src --ignore-src --rosdistro noetic -y
 #Build
-#RUN cd ~/ws_livox && catkin_make
-#RUN cd ~/catkin_ws && catkin_make
+RUN cd ~/ws_livox && catkin_make
+RUN cd ~/catkin_ws && catkin_make
