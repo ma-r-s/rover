@@ -15,8 +15,8 @@ RUN git clone https://github.com/Livox-SDK/livox_ros_driver.git ws_livox/src
 RUN cd ~/catkin_ws/src
 RUN git clone https://github.com/ros-drivers/velodyne.git
 RUN git clone https://github.com/hku-mars/Point-LIO.git
-RUN git clone https://github.com/mateusmenezes95/i2c_device_ros.git
-RUN git clone https://github.com/mateusmenezes95/mpu6050_driver.git
+RUN git clone https://github.com/Brazilian-Institute-of-Robotics/i2c_device_ros
+RUN git clone https://github.com/Brazilian-Institute-of-Robotics/mpu6050_driver
 RUN cd Point-LIO && git submodule update --init
 RUN cd ~/catkin_ws && rosdep install --from-paths src --ignore-src --rosdistro noetic -y
 #Build
