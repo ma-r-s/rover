@@ -31,3 +31,4 @@ RUN git submodule update --init
 # Build the packages
 WORKDIR /root/catkin_ws
 RUN . /opt/ros/noetic/setup.sh && catkin build
+RUN echo "source /root/catkin_ws/devel/setup.bash" >> /ros_entrypoint.sh
